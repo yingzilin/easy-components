@@ -44,8 +44,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolvePath('./src/packages/index.ts'),
-      name: 'componentsName',
-      fileName: (format) => `componentsName.${format}.js`
+      name: 'easy-components',
+      fileName: (format) => `easy-components.${format}.ts`
     },
     rollupOptions: {
       external: ['vue', 'element-plus'],
@@ -65,6 +65,7 @@ export default defineConfig({
         //   allowSyntheticDefaultImports: true,
         // }),
       ]
-    }
+    },
+    outDir: 'easy-components', // 指定输出路径
   }
 })

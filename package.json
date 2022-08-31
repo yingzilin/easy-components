@@ -1,7 +1,33 @@
 {
-  "name": "my-components",
-  "private": true,
+  "name": "easy-components",
+  "private": false,
   "version": "0.0.0",
+
+  "files": [
+    "easy-components"
+  ],
+  "module": "./easy-components/easy-components.es.ts",
+  "main": "./easy-components/easy-components.umd.ts",
+  "exports": {
+    ".": {
+      "import": "./easy-components/easy-components.es.ts",
+      "require": "./easy-components/easy-components.umd.ts"
+    },
+    "./dist/style.css": {
+      "import": "./easy-components/style.css",
+      "require": "./easy-components/style.css"
+    }
+  },
+  "keywords": [
+    "vue3",
+    "image",
+    "viewer",
+    "vue",
+    "vite",
+    "preview",
+    "picture",
+    "photo"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
